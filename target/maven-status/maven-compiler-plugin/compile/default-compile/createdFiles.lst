@@ -1,0 +1,4 @@
+spring/cassandra/rest/entity/Customer.class
+spring/cassandra/rest/controller/CustomerController.class
+spring/cassandra/rest/repository/CustomerRepository.class
+spring/cassandra/rest/Application.class
