@@ -5,15 +5,16 @@ import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
 
 @Table
-public class Customer {
+public class Usuario {
 
     @PrimaryKey
     private String id;
-    
-    @Column(value = "firstname")
-    private String firstName;
 
-    private String lastName;
+    @Column(value = "nome")
+    private String nom;
+
+    @Column(value = "idade")
+    private int ida;
 
     public String getId() {
         return id;
@@ -23,20 +24,20 @@ public class Customer {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getNom() {
+        return nom;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getLastName() {
-        return lastName;
+    public int getIda() {
+        return ida;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setIda(int ida) {
+        this.ida = ida;
     }
 
 }
