@@ -11,10 +11,10 @@ public class Usuario {
     private String id;
 
     @Column(value = "nome")
-    private String nom;
+    private String nome;
 
     @Column(value = "idade")
-    private int ida;
+    private int idade;
 
     public String getId() {
         return id;
@@ -24,20 +24,20 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public int getIda() {
-        return ida;
+    public int getIdade() {
+        return idade;
     }
 
-    public void setIda(int ida) {
-        this.ida = ida;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
 }
