@@ -11,24 +11,19 @@ import org.springframework.web.filter.CorsFilter;
 
 /**
  *
- * @author mais
+ * @author Nataniel Paiva
  */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
-//    public static void main(String[] args) {
-//        SpringApplication.run(Application.class, args);
-//    }
-    public static void main(String[] args) {
-        SpringApplication.run(applicationClass, args);
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(applicationClass);
+        return application.sources(getClass());
     }
-
-    private static Class<Application> applicationClass = Application.class;
 
     @Bean
     public CorsFilter corsFilter() {
