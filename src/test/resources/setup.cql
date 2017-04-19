@@ -1,11 +1,18 @@
-CREATE TABLE customer (id varchar PRIMARY KEY, firstname text, lastname text);
-
-CREATE TABLE perfil (id varchar PRIMARY KEY, nome text);
-CREATE TYPE IF NOT EXISTS perfil (nome text);
-
-CREATE TABLE usuario (id varchar PRIMARY KEY, nome text, idade int, perfil frozen<perfil>);
+CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
 
+CREATE TABLE mykeyspace.perfil (
+    id text PRIMARY KEY,
+    nome text,
+)
 
+CREATE TYPE mykeyspace.perfil (
+    nome text
+);
 
-CREATE TYPE IF NOT EXISTS usuario (id varchar PRIMARY KEY, nome text, idade int, perfil frozen<perfil>);
+CREATE TABLE mykeyspace.usuario (
+    id text PRIMARY KEY,
+    idade int,
+    nome text,
+    perfil frozen<perfil>
+)
