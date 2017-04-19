@@ -11,7 +11,7 @@ public class Perfil {
     private String id;
 
     @Column(value = "nome")
-    private String nom;
+    private String nome;
 
     public String getId() {
         return id;
@@ -21,12 +21,12 @@ public class Perfil {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
 }

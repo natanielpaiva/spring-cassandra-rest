@@ -4,7 +4,7 @@ CREATE KEYSPACE mykeyspace WITH REPLICATION = { 'class' : 'SimpleStrategy', 'rep
 CREATE TABLE mykeyspace.perfil (
     id text PRIMARY KEY,
     nome text,
-)
+);
 
 CREATE TYPE mykeyspace.perfil (
     nome text
@@ -15,4 +15,4 @@ CREATE TABLE mykeyspace.usuario (
     idade int,
     nome text,
     perfil frozen<perfil>
-)
+);
