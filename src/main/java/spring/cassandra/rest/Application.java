@@ -15,6 +15,7 @@ import org.springframework.data.cassandra.core.CassandraTemplate;
 import org.springframework.data.cassandra.mapping.BasicCassandraMappingContext;
 import org.springframework.data.cassandra.mapping.CassandraMappingContext;
 import org.springframework.data.cassandra.mapping.SimpleUserTypeResolver;
+import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -24,6 +25,7 @@ import org.springframework.web.filter.CorsFilter;
  * @author Nataniel Paiva
  */
 @SpringBootApplication
+@EnableCassandraRepositories(basePackages = { "spring.cassandra.rest.repository" })
 public class Application extends SpringBootServletInitializer {
 
     public static void main(String[] args) throws Exception {
@@ -52,4 +54,5 @@ public class Application extends SpringBootServletInitializer {
         return new CorsFilter(source);
     }
 
+    
 }
