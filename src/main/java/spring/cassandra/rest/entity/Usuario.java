@@ -3,6 +3,7 @@ package spring.cassandra.rest.entity;
 import org.springframework.data.cassandra.mapping.Column;
 import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
+import spring.cassandra.rest.entity.types.PerfilType;
 
 @Table
 public class Usuario {
@@ -15,6 +16,8 @@ public class Usuario {
 
     @Column(value = "idade")
     private int idade;
+
+    private PerfilType perfil;
 
     public String getId() {
         return id;
@@ -38,6 +41,14 @@ public class Usuario {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public PerfilType getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(PerfilType perfil) {
+        this.perfil = perfil;
     }
 
 }
